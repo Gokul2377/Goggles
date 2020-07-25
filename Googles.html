@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google</title>
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<link rel="stylesheet" href="Gstyle.css">
+	<a href="https://www.google.com/imghp?hl=en" id="g_img" style="margin: 10px; margin-right:13px;font-family: calibri;">Images</a>
+	<a href="https://www.gmail.com" id="mail" style="margin: 10px 0;font-family: calibri;">Gmail</a>	
+</head>
+
+<body id="bd" style="margin:0; margin-top: 10px;">
+<img src="G2.png" align="middle" onclick="light()" ondblclick="dark()">
+<br>
+<input type="text" name="search" id="searchbar" class="searchbard" onkeyup="Fun()">
+<br>
+<button onclick="testJS()" class="click">Google Search</button>
+<a href="https://www.gotoquiz.com/test_your_luck_1">
+<button class="click2">I'm feeling Lucky</button>
+</a>
+<br>
+
+<script type="text/javascript">
+function testJS() 
+{
+    var b = document.getElementById('searchbar').value,
+    url = 'https://www.google.com/search?q=' + (b);
+    document.location.href = url;
+}
+function light()
+{
+	document.getElementById("bd").setAttribute("class","style1");
+	document.getElementById("gog").setAttribute("class","style4");
+	document.getElementById("gog2").setAttribute("class","style5");
+	document.getElementById("g_img").setAttribute("class","style4");
+	document.getElementById("mail").setAttribute("class","style4");
+	document.getElementById("searchbar").setAttribute("class","searchbarL");
+	document.getElementById("footer").style.cssText="background-color:#f0f0f0;";
+}
+function dark()
+{
+	document.getElementById("bd").setAttribute("class","style2");
+	document.getElementById("gog").setAttribute("class","style3");
+	document.getElementById("gog2").setAttribute("class","style3");
+	document.getElementById("g_img").setAttribute("class","style3");
+	document.getElementById("mail").setAttribute("class","style3");
+	document.getElementById("searchbar").setAttribute("class","searchbarD");
+	document.getElementById("footer").style.cssText="background-color:#232424; color:#c9c9c9;";
+
+}
+</script>
+
+<script type="text/javascript">
+function Fun()
+{
+var S = document.getElementById("searchbar").value;
+var xhttp = new XMLHttpRequest();
+xhttp.open("POST", "basic2.php", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("searchbar="+S);
+};
+</script>
+
+<p id="lang">
+<span id="gog">Google offered in:</span> 
+<span id="gog2" style="margin-left: 4px;"> हिन्दी বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</span>
+</p>
+</div>
+
+<hr id="hr2">
+<div id="footer">
+<span style="margin-left: 16px"> India </span>
+<hr id="hr2">
+<a href="https://ads.google.com/intl/en_in/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+<span style="margin-left: 13px"> Advertising </span> 
+</a>
+<a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">
+<span style="margin-left: 13px"> Business </span>
+</a>
+<span style="margin-left: 13px"> <a href="https://about.google/intl/en_in/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1"> About </a> </span>
+<a href="https://www.google.com/search/howsearchworks/?fg=1">
+<span style="margin-left: 13px"> How Search works </span>
+</a>
+<span style="float: right;margin-right: 25px;"> Settings </span>
+<a href="https://policies.google.com/terms?fg=1">
+<span style="float: right;margin-right: 15px;"> Terms </span>
+<a>
+<a href="https://policies.google.com/privacy?fg=1">
+<span style="float: right; margin-right: 15px;"> Privacy </span>
+<a>
+</body>
+</html>
